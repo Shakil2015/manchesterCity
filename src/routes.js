@@ -1,11 +1,17 @@
 import React from 'react';
+import Layout from './Hoc/Layout';
+import {Switch,Route} from 'react-router-dom';
 
-function App() {
+import Home from './Components/Home'
+const Routes=()=> {
   return (
-    <div className="App">
-     
-    </div>
+    <Layout>
+     <Switch>
+       <Route exact component={Home} path="/"/>
+       
+     </Switch>
+    </Layout>
   );
 }
 
-export default App;
+export default Routes;

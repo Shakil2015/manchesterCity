@@ -7,7 +7,11 @@ import Routes from './routes';
 
 const App=()=>{
 
-    return()
+    return(
+        <BrowserRouter>
+        <Routes/>
+        </BrowserRouter>
+    )
 }
 
 ReactDOM.render(<App />, document.getElementById('root'));
