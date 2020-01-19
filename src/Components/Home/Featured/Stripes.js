@@ -20,10 +20,6 @@ export default class Stripes extends Component {
     }
    }
     
-
-    
-    
-   
      showStripes =()=>(
        this.state.stripes.map((stripe,i)=>(
            <Animate
@@ -32,16 +28,16 @@ export default class Stripes extends Component {
             start={{
                 background:'#ffffff'
             }}
-            enter={{
-                background:[this.state.stripes.background]
-            }}
+            enter={[{
+                background:[stripe.background]
+            }]}
            >
                {({background})=>{
                    return(
                        <div
                        className="stripe"
                        style={{
-                           background
+                           backgroundColor:[background]
                        }}
                        ></div>
                    );
