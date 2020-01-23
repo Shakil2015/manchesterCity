@@ -12,4 +12,9 @@ var firebaseConfig = {
     measurementId: "G-01LSRJSN8G"
   };
   firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
+  const firebasedb=firebase.database().ref().child('object');
+  firebasedb.on('value', snap=>console.log(snap.val()));
+
+
+
+  
